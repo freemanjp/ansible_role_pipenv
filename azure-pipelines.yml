@@ -4,6 +4,6 @@ pool:
 
 steps:
   - script: |
-      MOLECULEW_USE_SYSTEM=true
+      export MOLECULEW_USE_SYSTEM=true
       ./moleculew test
     displayName: Run molecule
