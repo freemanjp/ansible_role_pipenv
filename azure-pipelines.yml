@@ -3,8 +3,8 @@ pool:
   vmImage: 'Ubuntu 16.04'
 
 steps:
-  - script: pwd
-    displayName: Print working dir
+  - script: ln -s "$(pwd)" ../ansible_role_pipenv
+    displayName: Alias checkout directory for Molecule
   - script: ./moleculew wrapper-install
     displayName: Install molecule
   - script: ./moleculew test
