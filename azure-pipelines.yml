@@ -3,6 +3,8 @@ pool:
   vmImage: 'Ubuntu 16.04'
 
 steps:
+  - script: pwd
+    displayName: Print working dir
   - script: ./moleculew wrapper-install
     displayName: Install molecule
   - script: ./moleculew test
